@@ -1,4 +1,5 @@
 import { SearchForm, SearchInput, SearchBtn } from './SearchMovie.styled';
+import PropTypes from 'prop-types';
 
 const SearchMovie = ({ getSearchMovie, searchQuery, setSearchParams }) => {
   const handleSearchChange = ({ target: { value } }) => {
@@ -29,3 +30,9 @@ const SearchMovie = ({ getSearchMovie, searchQuery, setSearchParams }) => {
 };
 
 export default SearchMovie;
+
+SearchMovie.propTypes = {
+  getSearchMovie: PropTypes.func,
+  searchQuery: PropTypes.string,
+  setSearchParams: PropTypes.func,
+};
